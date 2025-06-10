@@ -1,0 +1,27 @@
+.header {
+    padding: 19px 23.75px 24px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    &__left-side,
+    &__right-side {
+        display: flex;
+    }
+
+    &__left-side {
+        align-items: flex-end;
+        gap: 16px;
+    }
+
+    &__right-side {
+        align-items: center;
+        gap: 24px;
+    }
+
+    &__user {
+        width: 24px;
+        height: 24px;
+    }
+}
