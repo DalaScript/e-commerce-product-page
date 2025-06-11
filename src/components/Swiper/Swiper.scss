@@ -1,0 +1,35 @@
+@use '../../colors.scss' as *;
+
+.swiper-slide {
+    display: flex;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: $white;
+
+    border: none;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+    tap-highlight-color: transparent;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    content: '';
+    width: 9px;
+    height: 14px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.swiper-button-prev::after {
+    background-image: url('../../assets/images/icon-previous-mobile.svg');
+}
+
+.swiper-button-next::after {
+    background-image: url('../../assets/images/icon-next-mobile.svg');
+}

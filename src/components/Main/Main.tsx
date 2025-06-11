@@ -1,21 +1,16 @@
 import styles from "./Main.module.scss";
 
-import product1 from "../../assets/images/image-product-1.jpg";
 import plusIcon from "../../assets/images/icon-plus.svg";
 import minusIcon from "../../assets/images/icon-minus.svg";
 import CartIcon from "../../assets/images/icon-cart.svg?react";
+
+import Slider from "../Swiper/Swiper";
 
 const Main = () => {
     return (
         <main>
             <div className="product">
-                <div className={`${styles["product__slider"]} product__slider`}>
-                    <img
-                        className={`${styles["product__slider-img"]} product__slider-img`}
-                        src={product1}
-                        alt="sneaker preview"
-                    />
-                </div>
+                <Slider />
                 <div
                     className={`${styles["product__details"]} product__details`}
                 >

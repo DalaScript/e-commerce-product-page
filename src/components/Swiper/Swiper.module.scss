@@ -1,0 +1,10 @@
+.swiper {
+    &__slide {
+        &-img {
+            width: 375px;
+            height: 300px;
+
+            object-fit: cover;
+        }
+    }
+}
