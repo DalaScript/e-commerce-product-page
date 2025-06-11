@@ -1,10 +1,7 @@
 import styles from "./Main.module.scss";
 
-import plusIcon from "../../assets/images/icon-plus.svg";
-import minusIcon from "../../assets/images/icon-minus.svg";
-import CartIcon from "../../assets/images/icon-cart.svg?react";
-
 import Slider from "../Swiper/Swiper";
+import OrderForm from "../OrderForm/OrderForm";
 
 const Main = () => {
     return (
@@ -61,33 +58,7 @@ const Main = () => {
                             $250.00
                         </p>
                     </div>
-                    <div className={`${styles["product__add-to-cart-section"]} product__add-to-cart-section`}>
-                        <div
-                            className={`${styles["product__quantity-container"]} product__quantity-container`}
-                        >
-                            <button
-                                className={`${styles["product__quantity-decrement-btn"]} product__quantity-decrement-btn`}
-                            >
-                                <img src={minusIcon} alt="decrease quantity" />
-                            </button>
-                            <span className={`${styles["product__quantity"]} product__quantity`}>3</span>
-                            <button
-                                className={`${styles["product__quantity-increment-btn"]} product__quantity-increment-btn`}
-                            >
-                                <img src={plusIcon} alt="increase quantity" />
-                            </button>
-                        </div>
-                        <button
-                            className={`${styles["product__add-to-cart-btn"]} product__add-to-cart-btn`}
-                        >
-                            <CartIcon
-                                width={17.5}
-                                height={16}
-                                viewBox="0 0 21.76 19.95"
-                                className={`${styles["product__add-to-cart-btn-icon"]}`}
-                            /> Add to cart
-                        </button>
-                    </div>
+                    <OrderForm />
                 </div>
             </div>
         </main>
