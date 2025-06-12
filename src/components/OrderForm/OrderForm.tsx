@@ -13,7 +13,7 @@ const OrderForm = () => {
     }
 
     const decreaseQuantity = () => {
-        setQuantity(prevQuantity => prevQuantity - 1);
+        setQuantity(prevQuantity => Math.max(prevQuantity - 1, 0));
     }
 
     
