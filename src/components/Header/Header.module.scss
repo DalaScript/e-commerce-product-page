@@ -5,14 +5,8 @@
     align-items: center;
     justify-content: space-between;
     
-    &__left-side,
     &__right-side {
         display: flex;
-    }
-
-    &__left-side {
-        align-items: flex-end;
-        gap: 16px;
     }
 
     &__right-side {

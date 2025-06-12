@@ -1,0 +1,96 @@
+@use '../../colors.scss' as *;
+
+.navbar {
+
+    display: flex;
+    align-items: flex-end;
+    gap: 16px;
+
+    z-index: 9;
+
+    &__open-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background-color: transparent;
+        border: none;
+        outline: none;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    &__overlay {
+        background-color: $black;
+
+        position: fixed;
+        inset: 0;
+
+        pointer-events: none;
+
+        opacity: 0;
+        transition: opacity .5s ease-in-out;
+
+        z-index: 9;
+
+        &--show {
+            opacity: .75;
+            pointer-events: auto;
+        }
+    }
+
+    &__list {
+        padding-top: 93.44px;
+        padding-left: 24px;
+        max-width: 250px;
+        width: 100%;
+        height: 100vh;
+
+        background-color: $white;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+
+        position: fixed;
+        top: 0;
+        left: -100%;
+        // left: 0;
+
+        z-index: 9;
+
+        transition: left .5s ease-in-out;
+
+        &--show {
+            left: 0;
+        }
+    }
+
+    &__link {
+        font-family: 'Kumbh Sans';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 26px;
+
+        color: $grey-950;
+
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    &__close-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background-color: transparent;
+        border: none;
+        outline: none;
+        -webkit-tap-highlight-color: transparent;
+
+
+        position: absolute;
+        top: 24px;
+        left: 24px;
+    }
+}
